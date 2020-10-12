@@ -21,7 +21,8 @@ var result = num1+num2;
 return result
 
 }
-
+log ("test")
+/*
 app.get('/adder',function(req,res)
 
 {
@@ -32,7 +33,7 @@ app.get('/adder',function(req,res)
     res.send(''+result+'')
      
 })
-
+*/
 
 var port=3000;
 app.listen(port)

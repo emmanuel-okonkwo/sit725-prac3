@@ -1,0 +1,39 @@
+var express=require('express')
+var moment= require('moment')
+
+var app=express()
+var log=function(message){
+
+    var time=moment().format()
+    console.log('[server]@'+time+''+message)
+
+
+
+}
+
+//serve static content 'web pages'
+
+
+
+
+var adder=function(num1,num2){
+var result = num1+num2;
+return result
+
+}
+
+app.get('/adder',function(req,res)
+
+{
+    log ('Adder Request Made')
+    var num1=parseInt(req.query.num1);
+    var num=parseInt(req.query.num2);
+    var result=adder(num1,num2)
+    res.send(''+result+'')
+     
+})
+
+
+var port=4000;
+app.listen(port)
+log('server listening on:'+ port)
